@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgba(0, 0, 0, .95);
+}
+h1 {
+    padding-top: 20px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px orange;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.stage {
+    width: 150px;
+    height: 193px;
+    perspective: 600px;
+    margin: 100px auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%) translateY(-30%);
+}
+.wrap {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.wrap img{
+    display: inline-block;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	transition: all .25s linear;
+	box-shadow: 1px 1px 1px 1px #fff;
+}
+.wrap img:nth-child(1){
+    transform: rotateZ(0deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(2){
+    transform: rotateZ(40deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(3){
+    transform: rotateZ(80deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(4){
+    transform: rotateZ(120deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(5){
+    transform: rotateZ(160deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(6){
+    transform: rotateZ(200deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(7){
+    transform: rotateZ(240deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(8){
+    transform: rotateZ(280deg) translateY(calc(206px + 30px));
+}
+.wrap img:nth-child(9){
+    transform: rotateZ(320deg) translateY(calc(206px + 30px));
+}
+/* .wrap img:nth-child(1){
+    transform: rotateZ(0deg)  ;
+}
+.wrap img:nth-child(2){
+    transform: rotateZ(40deg)  ;
+}
+.wrap img:nth-child(3){
+    transform: rotateZ(80deg)  ;
+}
+.wrap img:nth-child(4){
+    transform: rotateZ(120deg)  ;
+}
+.wrap img:nth-child(5){
+    transform: rotateZ(160deg)  ;
+}
+.wrap img:nth-child(6){
+    transform: rotateZ(200deg)  ;
+}
+.wrap img:nth-child(7){
+    transform: rotateZ(240deg)  ;
+}
+.wrap img:nth-child(8){
+    transform: rotateZ(280deg)  ;
+}
+.wrap img:nth-child(9){
+    transform: rotateZ(320deg)  ;
+} */
+@keyframes rotate-animation {
+	from {transform: rotateZ(0deg);}
+	to {transform: rotateZ(-360deg);}
+}
+
+.wrap {
+	animation: rotate-animation 10s linear infinite;
+}
+
+.wrap:hover {
+	animation-play-state: paused;
+}
+.wrap img:hover {
+	box-shadow: 1px 1px 5px 2px skyblue;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            background: #000;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        @keyframes shine {
+            0% { box-shadow: 0px 0px 5px  0px #fff; }
+            70% { box-shadow: 0px 0px 20px 10px #ff0000; }
+            100% { box-shadow: 0px 0px 5px 0px #fff; }
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: shine 1s linear infinite;
+        }
+        span {
+            font-size: 30px;
+            letter-spacing: 5px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #fff;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>CHINA</span>
+    </div>
+</body>
+</html>

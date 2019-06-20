@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgba(0, 0, 0, .95);
+}
+h1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 2px orange;
+}
+.stage {
+    width: 150px;
+    height: 193px;
+    perspective: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrap {
+    transform-style: preserve-3d;
+}
+img {
+    width:150px;
+    height: 193px;
+    position: absolute;
+}
+img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(2) {
+    transform: rotateY(40deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(3) {
+    transform: rotateY(80deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(4) {
+    transform: rotateY(120deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(5) {
+    transform: rotateY(160deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(6) {
+    transform: rotateY(200deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(7) {
+    transform: rotateY(240deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(8) {
+    transform: rotateY(280deg) translateZ(calc(206px + 30px));
+}
+img:nth-child(9) {
+    transform: rotateY(320deg) translateZ(calc(206px + 30px));
+}
+@keyframes rotate-animation {
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(-360deg);}
+}
+
+.wrap {
+	animation: rotate-animation 10s linear infinite;
+}

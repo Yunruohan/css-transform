@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .btn {
+            width:  70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #000;
+
+            text-align: center;
+            line-height: 70px;
+
+            cursor: pointer;
+
+            margin: 110px auto;
+
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .cubic-box {
+            width: 160px;
+            height: 160px; 
+            position:absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotateX(30deg, 30deg);
+        }
+        .cubic-box .face {
+            width: inherit;
+            height: inherit;
+            opacity: .75;
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .front { background-color:red; transition: all 1s linear; }
+        .back { background-color:green; transition: all 1s linear; }
+        .left { background-color:blue; transition: all 1s linear; }
+        .right { background-color:orange; transition: all 1s linear; }
+        .top { background-color:purple; transition: all 1s linear; }
+        .bottom { background-color:black; transition: all 1s linear; }
+        .btn:active + .cubic-box .front { transform: translateZ(80px);}
+        .btn:active + .cubic-box .back  { transform: rotateY(180deg) translateZ(80px);}
+        .btn:active + .cubic-box .left  { transform: rotateY(90deg) translateZ(80px);}
+        .btn:active + .cubic-box .right { transform: rotateY(-90deg) translateZ(80px);}
+        .btn:active + .cubic-box .top   { transform: rotateX(90deg) translateZ(80px);}
+        .btn:active + .cubic-box .bottom{ transform: rotateX(-90deg) translateZ(80px);}
+        @keyframes shine {
+            0%  { box-shadow: 0px 0px 5px  1px skyblue;}
+            50% { box-shadow: 0px 0px 10px 7px lightgrey;}
+            100%{ box-shadow: 0px 0px 5px  1px skyblue;}
+        }
+        .btn { transition: all 1s linear; }
+        .btn:active {
+            transform: scale(.75, .75);
+            animation: shine .5s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn"></div>
+    <div class="cubic-box">
+        <section class="face front">FRONT</section>
+        <section class="face back">BACK</section>
+        <section class="face left">LEFT</section>
+        <section class="face right">RIGHT</section>
+        <section class="face top">TOP</section>
+        <section class="face bottom">BOTTOM</section>
+    </div>
+</body>
+</html>
